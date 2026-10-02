@@ -1,0 +1,344 @@
+<title>90 Dias Romantizando Minha Vida</title>
+<meta name="description" content="Um desafio de 90 dias com um ritual por dia para romantizar a sua rotina. De 3 de outubro a 31 de dezembro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Ephesis&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&display=swap">
+<style>
+/* Layout: uma coluna estreita, como folhear o caderno no celular; a capa do caderno é o herói. */
+:root {
+  --paper: #FBF8F2;      /* papel do caderno */
+  --paper-2: #F3EADF;    /* tinta de outubro */
+  --ink: #2A211C;        /* texto */
+  --muted: #7A6A58;
+  --line: #E3D8C2;
+  --out: #A9795A;        /* outubro */
+  --out-ink: #8A5F41;
+  --nov: #79A3C3;        /* novembro */
+  --nov-ink: #4F7590;
+  --dez: #BE3A2B;        /* dezembro, cor da ação */
+  --display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --body: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --script: 'Ephesis', 'Brush Script MT', cursive;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 16px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 300; text-wrap: balance; margin: 0; line-height: 1.1; }
+h2 { font-size: clamp(30px, 7vw, 40px); }
+h2 em, h1 em { font-style: italic; font-weight: 400; }
+p { margin: 0; }
+.eyebrow { font-size: 11px; letter-spacing: .28em; text-transform: uppercase; font-weight: 500; color: var(--muted); }
+section { padding-block: 56px; border-top: 1px solid var(--line); }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+
+/* Botão */
+.cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px 24px; background: var(--dez); color: var(--paper); text-decoration: none; font-weight: 600; font-size: 16px; letter-spacing: .02em; border-radius: 999px; transition: transform .15s ease, background .15s ease; }
+.cta:hover { background: #A33224; transform: translateY(-1px); }
+.cta:focus-visible { outline: 3px solid var(--nov); outline-offset: 3px; }
+.cta-note { font-size: 13px; color: var(--muted); text-align: center; }
+
+/* Capa */
+.hero { padding-block: 20px 48px; }
+.brandbar { display: flex; justify-content: space-between; align-items: center; padding-block: 8px 20px; }
+.brandbar .eyebrow { color: var(--ink); }
+.cover { position: relative; overflow: hidden; background: var(--out); border-radius: 4px 14px 14px 4px; padding: 28px 26px 26px; aspect-ratio: 3 / 4; max-width: 100%; display: flex; flex-direction: column; box-shadow: 0 1px 0 rgba(42,33,28,.08), 0 24px 48px -24px rgba(42,33,28,.45); }
+.cover::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 10px; background: rgba(42,33,28,.12); }
+.c1, .c2 { position: absolute; border-radius: 50%; }
+.c1 { width: 92%; aspect-ratio: 1; right: -30%; top: 18%; background: #B98A6A; }
+.c2 { width: 66%; aspect-ratio: 1; right: -6%; top: 32%; background: #8FAEC4; mix-blend-mode: multiply; opacity: .55; }
+.cover > * { position: relative; }
+.cover .eyebrow { color: var(--ink); font-size: 10px; }
+.cover .big { margin-top: auto; font-family: var(--display); font-weight: 300; font-size: clamp(110px, 34vw, 190px); line-height: .8; color: var(--paper); letter-spacing: -.03em; }
+.cover .t { font-family: var(--display); font-weight: 300; font-size: clamp(30px, 8.5vw, 46px); line-height: 1.02; margin-top: 8px; }
+.cover .t em { color: var(--paper); }
+.cover .rule { height: 2px; width: 64px; background: var(--dez); margin: 18px 0 12px; }
+.cover .sub { font-family: var(--display); font-style: italic; font-size: 17px; }
+.cover .dates { font-size: 10px; letter-spacing: .26em; text-transform: uppercase; margin-top: 8px; }
+.hero-copy { margin-top: 32px; }
+.hero-copy h1 { font-size: clamp(32px, 8vw, 44px); }
+.hero-copy .lede { font-size: 18px; color: #4A3D33; }
+.status { display: inline-flex; align-self: flex-start; gap: 8px; align-items: center; padding: 6px 14px; border-radius: 999px; background: var(--paper-2); color: var(--out-ink); font-size: 13px; font-weight: 500; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--dez); }
+
+/* Citação */
+.quote { font-family: var(--display); font-weight: 300; font-size: clamp(26px, 6.5vw, 34px); line-height: 1.25; }
+.quote em { color: var(--out-ink); }
+.sign { font-family: var(--script); font-size: 34px; color: var(--dez); line-height: 1; }
+
+/* Para quem é */
+.for { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+.for li { padding: 14px 0 14px 32px; border-bottom: 1px solid var(--line); position: relative; }
+.for li::before { content: ""; position: absolute; left: 4px; top: 22px; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid var(--out); }
+
+/* Por dentro */
+.inside { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.inside div { background: var(--paper); padding: 18px 16px; min-width: 0; }
+.inside b { display: block; font-family: var(--display); font-weight: 400; font-size: 21px; line-height: 1.2; margin-bottom: 4px; }
+.inside span { font-size: 14px; color: var(--muted); }
+.inside .wide { grid-column: 1 / -1; background: var(--paper-2); }
+
+/* Meses */
+.months { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.month { padding: 14px 12px; border-radius: 10px; color: var(--paper); min-width: 0; }
+.month b { display: block; font-family: var(--display); font-weight: 400; font-size: 20px; }
+.month span { font-size: 12px; opacity: .9; }
+.m-out { background: var(--out); } .m-nov { background: var(--nov-ink); } .m-dez { background: var(--dez); }
+
+/* Ritual sorteado */
+.ritual-card { border: 1px solid var(--line); border-radius: 14px; background: #FFFDF8; padding: 24px 22px; display: flex; flex-direction: column; gap: 14px; }
+.ritual-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ritual-day { font-family: var(--display); font-size: 15px; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.ritual-text { font-family: var(--display); font-weight: 300; font-size: clamp(24px, 6vw, 30px); line-height: 1.25; min-height: 2.5em; }
+.ritual-check { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.ritual-check i { width: 18px; height: 18px; border: 1.5px solid currentColor; border-radius: 4px; display: inline-block; }
+.btn-ghost { appearance: none; border: 1.5px solid var(--ink); background: transparent; color: var(--ink); font: 500 15px var(--body); padding: 12px 20px; border-radius: 999px; cursor: pointer; align-self: flex-start; }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); }
+.btn-ghost:focus-visible { outline: 3px solid var(--nov); outline-offset: 3px; }
+
+/* Como funciona */
+.steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 20px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: baseline; }
+.steps li::before { counter-increment: s; content: "0" counter(s); font-family: var(--display); font-size: 28px; color: var(--out); font-variant-numeric: tabular-nums; }
+.steps b { font-weight: 600; }
+
+/* Mapa */
+.legend { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 22px; height: 22px; border-radius: 4px; border: 1.5px solid var(--out); }
+.sw.full { background: var(--out); }
+.sw.half { background: linear-gradient(135deg, var(--out) 50%, transparent 50%); }
+.minimap { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; max-width: 100%; }
+.minimap i { aspect-ratio: 1; border-radius: 3px; border: 1px solid var(--line); background: #FFFDF8; }
+.minimap i.f { background: var(--c); border-color: var(--c); }
+.minimap i.h { background: linear-gradient(135deg, var(--c) 50%, #FFFDF8 50%); border-color: var(--c); }
+
+/* FAQ */
+details { border-bottom: 1px solid var(--line); padding-block: 16px; }
+summary { cursor: pointer; font-family: var(--display); font-size: 20px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--out); font-family: var(--body); }
+details[open] summary::after { content: "−"; }
+summary:focus-visible { outline: 2px solid var(--nov); outline-offset: 4px; }
+details p { margin-top: 10px; color: #4A3D33; }
+
+/* Final */
+.final { background: var(--out); color: var(--ink); border-top: 0; position: relative; overflow: hidden; }
+.final .c1 { width: 70%; right: -25%; top: -20%; }
+.final .wrap { position: relative; }
+.final h2 em { color: var(--paper); }
+footer { padding-block: 28px 40px; font-size: 13px; color: var(--muted); text-align: center; }
+footer a { color: inherit; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="brandbar">
+    <span class="eyebrow">@daillydadivaaa</span>
+    <svg viewBox="0 0 132 82" width="48" height="30" role="img" aria-label="Símbolo Regenerar">
+      <defs><clipPath id="cv"><circle cx="82" cy="41" r="34"/></clipPath></defs>
+      <circle cx="50" cy="41" r="34" fill="#79A3C3"/>
+      <circle cx="82" cy="41" r="34" fill="#E9DFCE"/>
+      <circle cx="50" cy="41" r="34" fill="#5B5348" clip-path="url(#cv)"/>
+    </svg>
+  </header>
+
+  <div class="hero">
+    <div class="cover" aria-label="Capa do caderno 90 dias romantizando minha vida">
+      <div class="c1"></div><div class="c2"></div>
+      <div class="eyebrow">Um caderno Regenerar<br>por Amanda Martins</div>
+      <div class="big">90</div>
+      <div class="t">dias<br><em>romantizando minha vida</em></div>
+      <div class="rule"></div>
+      <div class="sub">um desafio para romantizar a sua rotina</div>
+      <div class="dates">3 de outubro — 31 de dezembro de 2026</div>
+    </div>
+
+    <div class="hero-copy stack">
+      <span class="status" id="status">O desafio começa em 3 de outubro</span>
+      <h1>Termine o ano <em>vivendo a sua rotina</em>, não só passando por ela.</h1>
+      <p class="lede">Um ritual pequeno por dia, durante 90 dias. Um café sem celular, flores pra você, uma noite sem telas. Somadas, essas escolhas mudam o jeito como você vive o seu dia.</p>
+      <a class="cta js-cta" href="https://ig.me/m/daillydadivaaa">Quero o meu caderno</a>
+      <p class="cta-note">Caderno digital em PDF com links. Use no GoodNotes, no Notability ou no computador.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap stack">
+    <p class="quote">“Romantizar a vida não é fingir que está tudo perfeito. <em>É escolher prestar atenção.</em>”</p>
+    <p>Nos próximos 90 dias você não vai virar outra pessoa. Vai fazer pequenas coisas todos os dias que deixam a rotina um pouco mais bonita. E vai terminar o ano sabendo exatamente como chegou até ali.</p>
+    <p class="sign">com carinho, Amanda</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Pra você, diva, que…</span>
+    <h2>Esse caderno é <em>pra você</em> se…</h2>
+    <ul class="for">
+      <li>cuida de todo mundo e deixa você sempre pro final da lista</li>
+      <li>sente que os dias estão passando no automático</li>
+      <li>quer criar hábitos de autocuidado sem uma rotina impossível</li>
+      <li>já começou mil desafios e se cobrou demais quando falhou</li>
+      <li>quer chegar em dezembro orgulhosa do caminho, e não só do resultado</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Por dentro do caderno</span>
+    <h2>Tudo o que você precisa <em>pra 90 dias</em></h2>
+    <div class="inside">
+      <div class="wide"><b>90 rituais</b><span>Um por dia, com data marcada, pra romantizar a sua rotina.</span></div>
+      <div><b>Minhas intenções</b><span>Quem você quer ser em 31 de dezembro.</span></div>
+      <div><b>Mapa dos 90 dias</b><span>Pinte cada dia vivido.</span></div>
+      <div><b>Planner semanal</b><span>Prioridades e o ritual que você mais quer viver.</span></div>
+      <div><b>Tracker de hábitos</b><span>Hábitos, humor e água da semana.</span></div>
+      <div><b>Cardápio</b><span>Refeições, lista de compras e uma receita nova.</span></div>
+      <div><b>Diário</b><span>Humor e três pequenas alegrias por dia.</span></div>
+      <div><b>3 checkpoints</b><span>Nos dias 30, 60 e 90, pra ajustar a rota.</span></div>
+      <div><b>Carta pra 2027</b><span>Pra você que vai começar o próximo ano.</span></div>
+    </div>
+    <div class="months" aria-label="Os três meses do desafio">
+      <div class="month m-out"><b>outubro</b><span>dias 01 a 29</span></div>
+      <div class="month m-nov"><b>novembro</b><span>dias 30 a 59</span></div>
+      <div class="month m-dez"><b>dezembro</b><span>dias 60 a 90</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Prove um ritual</span>
+    <h2>Que tal começar <em>agora mesmo?</em></h2>
+    <div class="ritual-card" id="ritual" aria-live="polite">
+      <div class="ritual-meta">
+        <span class="ritual-day" id="r-day">dia 01</span>
+        <span class="eyebrow" id="r-month">outubro</span>
+      </div>
+      <p class="ritual-text" id="r-text">Arrume a cama como se fosse de hotel.</p>
+      <span class="ritual-check"><i></i> feito</span>
+    </div>
+    <button class="btn-ghost" id="r-btn" type="button">Sortear outro ritual</button>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Simples, <em>do jeitinho que a rotina pede</em></h2>
+    <ol class="steps">
+      <li><p><b>Comece pelas intenções.</b> Escreva quem você quer ser em 31 de dezembro.</p></li>
+      <li><p><b>Planeje a semana.</b> Todo começo de semana tem planner, tracker de hábitos e cardápio.</p></li>
+      <li><p><b>Viva um ritual por dia.</b> Cada dia do diário traz um pequeno ritual pra você.</p></li>
+      <li><p><b>Pare nos checkpoints.</b> Nos dias 30, 60 e 90 você olha pra trás e ajusta a rota.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Aqui não tem cobrança</span>
+    <h2>O desafio é sobre voltar, <em>não sobre ser perfeita</em></h2>
+    <p>Perdeu um dia? Vira a página e continua. No mapa dos 90 dias você pinta cada casinha do jeito que o dia foi, sem culpa.</p>
+    <div class="minimap" id="minimap" aria-hidden="true"></div>
+    <div class="legend">
+      <span><i class="sw full"></i>ritual feito</span>
+      <span><i class="sw half"></i>feito pela metade</span>
+      <span><i class="sw"></i>amanhã eu volto</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Dúvidas</span>
+    <h2 style="margin-block: 12px 8px">Perguntas <em>frequentes</em></h2>
+    <details>
+      <summary>O caderno é físico ou digital?</summary>
+      <p>Digital, em PDF. Ele tem links: toque em “sumário” no rodapé de qualquer página pra navegar. Funciona no GoodNotes, no Notability ou no computador.</p>
+    </details>
+    <details>
+      <summary>Quando começa?</summary>
+      <p>As páginas vão de 3 de outubro a 31 de dezembro de 2026, com um ritual por dia, incluindo os checkpoints dos dias 30, 60 e 90.</p>
+    </details>
+    <details>
+      <summary>E se eu perder um dia?</summary>
+      <p>Tudo bem. Não existe jeito errado de usar este caderno. Vire a página e continue. No mapa você marca “amanhã eu volto” e segue.</p>
+    </details>
+    <details>
+      <summary>Preciso de muito tempo por dia?</summary>
+      <p>Não. Os rituais são pequenos de propósito: ler dez páginas, beber água numa taça bonita, dançar uma música inteira, ir dormir trinta minutos mais cedo.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="c1"></div>
+  <div class="wrap stack">
+    <span class="eyebrow" style="color: var(--ink)">Vem com a gente</span>
+    <h2>Somos todas divas <em>nos apoiando.</em></h2>
+    <p>Em 31 de dezembro você vai escrever uma carta pra você de 2027 contando tudo o que viveu. Comece hoje a história que você vai contar.</p>
+    <a class="cta js-cta" href="https://ig.me/m/daillydadivaaa">Quero romantizar a minha vida</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  Amanda Martins · Regenerar · <a href="https://instagram.com/daillydadivaaa">@daillydadivaaa</a>
+</footer>
+
+<script>
+// Troque pelo link de checkout (Hotmart, Kiwify etc.) quando tiver um.
+const LINK_DE_COMPRA = 'https://ig.me/m/daillydadivaaa';
+document.querySelectorAll('.js-cta').forEach(a => { a.href = LINK_DE_COMPRA; a.target = '_blank'; a.rel = 'noopener'; });
+
+const R = ["Arrume a cama como se fosse de hotel.","Tome o café da manhã sem o celular por perto.","Compre flores para você, nem que seja uma só.","Monte uma playlist para a sua semana.","Faça uma caminhada de 20 minutos sem fones.","Use uma roupa que você ama num dia comum.","Escreva três coisas pelas quais você é grata.","Acenda uma vela no fim do dia.","Monte um prato bonito, mesmo que seja só para você.","Fotografe cinco detalhes bonitos do seu dia.","Organize a gaveta que mais te incomoda.","Leia dez páginas de um livro.","Tome um banho demorado, sem pressa nenhuma.","Mande uma mensagem carinhosa para alguém.","Pare para assistir ao pôr do sol.","Beba água numa taça bonita.","Faça um piquenique, nem que seja no chão da sala.","Escreva uma carta para você do futuro.","Desligue as telas uma hora antes de dormir.","Conheça um café onde você nunca foi.","Cozinhe uma receita que você nunca fez.","Arrume a mesa para uma refeição comum.","Alongue o corpo logo ao acordar.","Saia para um encontro com você mesma.","Troque a roupa de cama e perfume o travesseiro.","Escute um álbum inteiro, do início ao fim.","Escreva sobre uma memória feliz da infância.","Faça uma limpeza no rolo da câmera.","Cuide de uma planta ou plante algo novo.","Releia as suas intenções e responda o checkpoint.","Coma uma fruta devagar, prestando atenção no sabor.","Use o seu perfume favorito para ficar em casa.","Liste dez coisas que te fazem feliz.","Volte para casa por uma rua diferente.","Prepare um chá e beba sentada, sem fazer mais nada.","Doe algo que você não usa mais.","Escreva um elogio sincero para você mesma.","Assista a um filme que te conforta.","Prepare um café da manhã especial.","Fique quinze minutos em silêncio.","Arrume o seu cantinho de trabalho ou estudo.","Tire uma foto sua de que você goste.","Faça uma pausa ao ar livre no meio do dia.","Passeie por uma livraria ou biblioteca.","Escreva o que você quer sentir em dezembro.","Dance uma música inteira, sozinha.","Prepare uma marmita caprichada.","Hidrate o corpo inteiro, com calma.","Diga não para algo que não te faz bem.","Monte um mural de inspirações.","Almoce longe da mesa de trabalho.","Aprenda algo novo por vinte minutos.","Ligue (não mande áudio) para alguém que você ama.","Escreva sobre algo que você superou este ano.","Esvazie e organize a sua bolsa.","Vá dormir trinta minutos mais cedo.","Faça um passeio sem destino.","Cozinhe uma receita de família.","Escreva cinco coisas que deram certo este mês.","Revisite o seu mapa e responda o checkpoint.","Decore um cantinho da casa.","Faça um mimo para alguém, sem motivo.","Leia um poema em voz alta.","Faça o seu skincare sem pressa, como um ritual.","Coma um doce que você ama, sem culpa.","Escreva como seria a sua rotina ideal.","Faça uma faxina de quinze minutos com música alta.","Acorde cedo para ver o nascer do sol.","Comece a sua lista de desejos para o ano novo.","Monte um look novo só com peças que você já tem.","Deixe um bilhete para alguém da sua casa.","Respire fundo cinco vezes antes de cada refeição.","Prepare um jantar à luz de velas.","Reveja as suas fotos favoritas do ano.","Caminhe à noite olhando as luzes de fim de ano.","Faça um presente com as suas mãos.","Escreva o que você aprendeu sobre você este ano.","Deixe o celular em outro cômodo por uma hora.","Asse algo que deixe a casa cheirosa.","Escreva três sonhos, sem se censurar.","Tome um café num lugar bonito.","Agradeça a alguém que fez diferença no seu ano.","Prepare algo especial para a noite de hoje.","Descanse sem culpa. Hoje é só isso.","Escute as músicas que marcaram o seu ano.","Conte o seu ano em dez fotos.","Escreva o que você quer deixar no ano que termina.","Escreva o que você quer levar para o ano novo.","Prepare um pequeno ritual para amanhã.","Releia este caderno, responda o checkpoint e celebre você."];
+const START = Date.UTC(2026, 9, 3), DAY = 864e5;
+const MES = ['outubro', 'novembro', 'dezembro'];
+const COR = { outubro: '#A9795A', novembro: '#4F7590', dezembro: '#BE3A2B' };
+const monthOf = i => MES[new Date(START + (i - 1) * DAY).getUTCMonth() - 9];
+const pad = n => String(n).padStart(2, '0');
+
+function show(i) {
+  const m = monthOf(i);
+  document.getElementById('r-day').textContent = 'dia ' + pad(i);
+  const me = document.getElementById('r-month');
+  me.textContent = m; me.style.color = COR[m];
+  document.getElementById('r-text').textContent = R[i - 1];
+}
+let cur = 1;
+document.getElementById('r-btn').addEventListener('click', () => {
+  let n; do { n = 1 + Math.floor(Math.random() * R.length); } while (n === cur);
+  cur = n; show(n);
+});
+
+// Mapa ilustrativo: alguns dias feitos, outros pela metade, outros em branco.
+const map = document.getElementById('minimap');
+const pattern = 'ffhffffhf-ffffhff-ffhffff-fhffff-fffhf-ffff-hfff-fhf-ff-f';
+for (let i = 1; i <= 30; i++) {
+  const el = document.createElement('i');
+  const s = pattern[i - 1];
+  if (s === 'f') el.className = 'f'; else if (s === 'h') el.className = 'h';
+  el.style.setProperty('--c', COR[monthOf(i)]);
+  map.appendChild(el);
+}
+
+// Mensagem de status conforme a data de hoje.
+(function () {
+  const now = new Date();
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const diff = Math.round((START - today) / DAY);
+  const el = document.getElementById('status');
+  if (diff > 1) el.textContent = 'Começa em ' + diff + ' dias: 3 de outubro';
+  else if (diff === 1) el.textContent = 'Começa amanhã, 3 de outubro';
+  else if (diff === 0) el.textContent = 'Começa hoje!';
+  else if (diff > -90) {
+    const d = 1 - diff;
+    el.textContent = 'O desafio está no dia ' + pad(d) + ' · ainda dá tempo';
+    cur = d; show(d);
+  } else el.textContent = 'De 3 de outubro a 31 de dezembro';
+})();
+</script>
