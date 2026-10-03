@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#D81B5A">
+<meta property="og:title" content="90 dias romantizando minha vida">
+<meta property="og:description" content="Um ritual por dia, cuidado com a pele e planner semanal. Comece quando quiser. Por Amanda Martins · @daillydadivaaa">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23D81B5A'/%3E%3Ctext x='32' y='43' font-family='Arial Black,Arial' font-weight='900' font-size='30' fill='white' text-anchor='middle'%3E90%3C/text%3E%3C/svg%3E">
+<title>90 Dias Romantizando Minha Vida</title>
+<meta name="description" content="Um desafio de 90 dias com um ritual por dia, cuidado com a pele e planner semanal. Comece quando quiser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=League+Spartan:wght@700;800;900&display=swap">
+<style>
+/* Layout: uma coluna, como folhear o caderno no celular; a capa rosa é o herói e os blocos alternam rosa claro e branco. */
+:root {
+  --pink: #D81B5A;       /* cor principal do caderno */
+  --pink-2: #E84A7F;
+  --wine: #6E0D30;       /* texto */
+  --blush: #FBD3DF;
+  --blush-2: #F3B3C5;
+  --paper: #FFF7F9;
+  --white: #FFFFFF;
+  --display: 'League Spartan', 'Arial Black', Arial, sans-serif;
+  --body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+  --hand: 'Caveat', 'Bradley Hand', 'Comic Sans MS', cursive;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--wine); font-family: var(--body); font-size: 16px; line-height: 1.6; margin: 0; }
+.wrap { max-width: 640px; margin: 0 auto; padding-inline: 20px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 800; text-wrap: balance; margin: 0; line-height: 1; letter-spacing: -.01em; }
+h2 { font-size: clamp(30px, 7.5vw, 42px); color: var(--pink); }
+.hand { font-family: var(--hand); font-weight: 700; }
+p { margin: 0; }
+.eyebrow { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; font-weight: 700; }
+section { padding-block: 56px; }
+section.alt { background: var(--white); }
+.stack { display: flex; flex-direction: column; gap: 16px; }
+
+/* Botão */
+.cta { display: inline-flex; align-items: center; justify-content: center; width: 100%; padding: 18px 24px; background: var(--wine); color: var(--white); text-decoration: none; font-weight: 700; font-size: 16px; letter-spacing: .02em; border-radius: 999px; box-shadow: 0 5px 0 rgba(110,13,48,.25); transition: transform .15s ease, box-shadow .15s ease; }
+.cta:hover { transform: translateY(-2px); box-shadow: 0 7px 0 rgba(110,13,48,.25); }
+.cta:focus-visible { outline: 3px solid var(--blush); outline-offset: 3px; }
+.cta.light { background: var(--white); color: var(--pink); box-shadow: 0 5px 0 var(--wine); }
+.cta-note { font-size: 13px; text-align: center; opacity: .85; }
+
+/* Capa */
+.hero { background: var(--pink); color: var(--white); position: relative; overflow: hidden; padding-block: 20px 48px; }
+.circle { position: absolute; border-radius: 50%; pointer-events: none; }
+.hero .k1 { width: 120vw; max-width: 620px; aspect-ratio: 1; background: var(--pink-2); right: -45%; top: -22%; }
+.hero .k2 { width: 70vw; max-width: 340px; aspect-ratio: 1; background: var(--blush); left: -40%; bottom: -34%; opacity: .9; }
+.hero .k3 { width: 64px; aspect-ratio: 1; background: var(--blush); right: 14%; top: 46%; }
+.hero .wrap { position: relative; }
+.brandbar { display: flex; justify-content: space-between; align-items: flex-start; padding-block: 8px 28px; }
+.brandbar .eyebrow span { display: block; opacity: .85; }
+.handle { font-size: 13px; font-weight: 700; color: var(--white); text-decoration: none; }
+.cover-title { position: relative; }
+.ninety { display: flex; align-items: flex-end; gap: 6px; }
+.ninety b { font-family: var(--display); font-weight: 900; font-size: clamp(150px, 46vw, 260px); line-height: .78; letter-spacing: -.05em; }
+.ninety .hand { font-size: clamp(60px, 17vw, 100px); line-height: .8; color: var(--blush); transform: rotate(-8deg); margin-bottom: .3em; }
+.cover-title h1 { font-size: clamp(36px, 10vw, 64px); line-height: .95; text-transform: uppercase; margin-top: 20px; }
+.cover-title .sub { font-size: 19px; margin-top: 12px; }
+.pill { display: inline-block; background: var(--white); color: var(--pink); border-radius: 999px; padding: 9px 16px; font-size: 10.5px; letter-spacing: .12em; font-weight: 700; text-transform: uppercase; margin-top: 18px; }
+.sticker { position: absolute; right: 0; top: -8px; width: 104px; aspect-ratio: 1; border-radius: 50%; background: var(--white); color: var(--pink); display: flex; align-items: center; justify-content: center; text-align: center; transform: rotate(12deg); font-family: var(--hand); font-weight: 700; font-size: 26px; line-height: .95; box-shadow: 0 5px 0 var(--wine); }
+.hero-copy { margin-top: 36px; }
+.hero-copy .lede { font-size: 18px; }
+
+/* Citação */
+.quote { font-family: var(--display); font-weight: 800; font-size: clamp(26px, 6.5vw, 34px); line-height: 1.1; color: var(--pink); }
+.sign { font-size: 34px; color: var(--pink); line-height: 1; }
+.friend { background: var(--blush); border-radius: 20px; padding: 18px 20px; display: flex; flex-direction: column; gap: 4px; }
+.friend .hand { font-size: 28px; line-height: 1.05; color: var(--pink); }
+
+/* Para quem é */
+.for { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.for li { padding: 14px 16px 14px 46px; background: var(--paper); border-radius: 16px; position: relative; }
+.for li::before { content: "♥"; position: absolute; left: 18px; top: 13px; color: var(--pink); font-size: 16px; }
+
+/* Por dentro */
+.inside { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.inside div { background: var(--white); border: 2px solid var(--blush); border-radius: 18px; padding: 16px; min-width: 0; }
+.inside b { display: block; font-family: var(--display); font-weight: 800; font-size: 19px; line-height: 1.1; color: var(--pink); margin-bottom: 6px; }
+.inside span { font-size: 14px; }
+.inside .wide { grid-column: 1 / -1; background: var(--pink); border-color: var(--pink); color: var(--white); }
+.inside .wide b { color: var(--white); font-size: 24px; }
+.months { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.month { padding: 14px 12px; border-radius: 16px; min-width: 0; }
+.month b { display: block; font-family: var(--display); font-weight: 800; font-size: 20px; text-transform: uppercase; }
+.month span { font-size: 12px; }
+.m1 { background: var(--blush); } .m2 { background: var(--pink-2); color: var(--white); } .m3 { background: var(--wine); color: var(--white); }
+
+/* Pele */
+.skin { background: var(--blush); }
+.skin h2 { color: var(--wine); }
+.rules { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; counter-reset: r; }
+.rules li { background: var(--white); border-radius: 18px; padding: 16px 18px 16px 62px; position: relative; }
+.rules li::before { counter-increment: r; content: "0" counter(r); position: absolute; left: 16px; top: 14px; font-family: var(--display); font-weight: 900; font-size: 26px; color: var(--pink); }
+.rules b { color: var(--pink); }
+.tracker { background: var(--white); border-radius: 18px; padding: 16px; display: grid; grid-template-columns: auto 1fr; gap: 8px 12px; align-items: center; overflow-x: auto; }
+.tracker .lab { font-size: 11px; letter-spacing: .16em; font-weight: 700; }
+.dots { display: grid; grid-template-columns: repeat(10, 1fr); gap: 5px; min-width: 0; }
+.dots i { aspect-ratio: 1; border-radius: 50%; border: 2px solid var(--pink); }
+.dots i.on { background: var(--pink); }
+.note { font-size: 13px; background: var(--paper); border-radius: 14px; padding: 12px 14px; }
+
+/* Ritual sorteado */
+.ritual-card { border-radius: 24px; background: var(--pink); color: var(--white); padding: 24px 22px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 6px 0 var(--wine); }
+.ritual-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ritual-day { font-family: var(--display); font-weight: 800; font-size: 18px; text-transform: uppercase; font-variant-numeric: tabular-nums; }
+.ritual-text { font-family: var(--hand); font-weight: 700; font-size: clamp(30px, 8vw, 38px); line-height: 1.1; min-height: 2.2em; }
+.ritual-check { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .16em; font-weight: 700; }
+.ritual-check i { width: 18px; height: 18px; border: 2px solid currentColor; border-radius: 5px; display: inline-block; }
+.btn-ghost { appearance: none; border: 2px solid var(--pink); background: transparent; color: var(--pink); font: 700 15px var(--body); padding: 12px 20px; border-radius: 999px; cursor: pointer; align-self: flex-start; }
+.btn-ghost:hover { background: var(--pink); color: var(--white); }
+.btn-ghost:focus-visible { outline: 3px solid var(--blush-2); outline-offset: 3px; }
+
+/* Como funciona */
+.steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 48px 1fr; gap: 12px; align-items: baseline; }
+.steps li::before { counter-increment: s; content: "0" counter(s); font-family: var(--display); font-weight: 900; font-size: 30px; color: var(--pink); font-variant-numeric: tabular-nums; }
+.steps b { font-weight: 700; }
+.stickers { display: flex; flex-wrap: wrap; gap: 8px; }
+.stickers span { font-family: var(--hand); font-weight: 700; font-size: 22px; background: var(--blush); color: var(--pink); border-radius: 999px; padding: 2px 14px; }
+.stickers span:nth-child(3n+2) { transform: rotate(-3deg); }
+.stickers span:nth-child(3n) { transform: rotate(2deg); background: var(--pink); color: var(--white); }
+
+/* Do seu jeito */
+.ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.way { border-radius: 22px; background: var(--paper); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.way svg { width: 38px; height: 38px; color: var(--pink); }
+.way h3 { font-size: 26px; color: var(--pink); text-transform: uppercase; }
+.way ul { margin: 0; padding-left: 18px; font-size: 15px; display: flex; flex-direction: column; gap: 4px; }
+
+/* Mapa */
+.legend { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 8px; }
+.sw { width: 22px; height: 22px; border-radius: 6px; border: 2px solid var(--pink); }
+.sw.full { background: var(--pink); }
+.sw.half { background: linear-gradient(135deg, var(--pink) 50%, transparent 50%); }
+.minimap { display: grid; grid-template-columns: repeat(10, 1fr); gap: 5px; max-width: 100%; }
+.minimap i { aspect-ratio: 1; border-radius: 6px; border: 2px solid var(--blush-2); background: var(--white); }
+.minimap i.f { background: var(--pink); border-color: var(--pink); }
+.minimap i.h { background: linear-gradient(135deg, var(--pink) 50%, var(--white) 50%); border-color: var(--pink); }
+
+/* FAQ */
+details { border-bottom: 2px solid var(--blush); padding-block: 16px; }
+summary { cursor: pointer; font-weight: 700; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--pink); font-size: 22px; line-height: 1; }
+details[open] summary::after { content: "−"; }
+summary:focus-visible { outline: 2px solid var(--pink); outline-offset: 4px; }
+details p { margin-top: 10px; }
+
+/* Final */
+.final { background: var(--pink); color: var(--white); position: relative; overflow: hidden; }
+.final .k1 { width: 80vw; max-width: 420px; aspect-ratio: 1; background: var(--pink-2); right: -30%; top: -30%; }
+.final .wrap { position: relative; }
+.final h2 { color: var(--white); text-transform: uppercase; }
+.final .hand { color: var(--blush); font-size: 34px; }
+footer { padding-block: 28px 40px; font-size: 13px; text-align: center; }
+footer a { color: var(--pink); font-weight: 700; text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="circle k1"></div><div class="circle k2"></div><div class="circle k3"></div>
+  <div class="wrap">
+    <header class="brandbar">
+      <span class="eyebrow">Um caderno Regenerar<span>por Amanda Martins</span></span>
+      <a class="handle" href="https://instagram.com/daillydadivaaa" target="_blank" rel="noopener">@daillydadivaaa</a>
+    </header>
+
+    <div class="cover-title">
+      <div class="sticker">bora<br>viver!</div>
+      <div class="ninety"><b>90</b><span class="hand">dias</span></div>
+      <h1>romantizando<br>minha vida</h1>
+      <p class="sub">um desafio para romantizar a sua rotina</p>
+      <span class="pill">Comece quando quiser · 90 dias seguidos</span>
+    </div>
+
+    <div class="hero-copy stack">
+      <p class="lede">Um ritual pequeno por dia, cuidado com a pele e uma semana planejada. Durante 90 dias você escolhe melhor, todos os dias, e termina sabendo exatamente como chegou até ali.</p>
+      <a class="cta light js-cta" href="https://ig.me/m/daillydadivaaa">Quero o meu caderno</a>
+      <p class="cta-note">Caderno em PDF: preencha no tablet ou imprima e escreva à mão.</p>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap stack">
+    <p class="quote">“Romantizar a vida não é fingir que está tudo perfeito. É escolher prestar atenção.”</p>
+    <p>Nos próximos 90 dias você não vai virar outra pessoa. Vai cuidar da pele com constância, cuidar do corpo, planejar a semana, comer com mais atenção e deixar a rotina um pouco mais bonita, com um café tomado com calma ou uma noite sem telas.</p>
+    <div class="friend">
+      <span class="eyebrow">Somos todas divas nos apoiando</span>
+      <span class="hand">Se puder, faça com uma amiga: mulher que cuida de si inspira a do lado.</span>
+    </div>
+    <p class="sign hand">com carinho, Amanda</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap stack">
+    <span class="eyebrow">Pra você, diva</span>
+    <h2>Esse caderno é pra você se…</h2>
+    <ul class="for">
+      <li>cuida de todo mundo e deixa você sempre pro final da lista</li>
+      <li>sente que os dias estão passando no automático</li>
+      <li>quer uma rotina de pele simples, que você consiga cumprir</li>
+      <li>já começou mil desafios e se cobrou demais quando falhou</li>
+      <li>quer olhar pra trás daqui a 90 dias e sentir orgulho do caminho</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Por dentro do caderno</span>
+    <h2>Tudo o que você precisa pra 90 dias</h2>
+    <div class="inside">
+      <div class="wide"><b>90 rituais</b><span>Um por dia, pra cuidar de você e da sua rotina.</span></div>
+      <div><b>A minha pele</b><span>5 páginas pra montar a rotina e acompanhar a pele do dia 1 ao 90.</span></div>
+      <div><b>Minhas intenções</b><span>Quem você quer ser no dia 90 e com quem vai fazer junto.</span></div>
+      <div><b>Mapa dos 90 dias</b><span>Pinte cada dia vivido.</span></div>
+      <div><b>Planner semanal</b><span>Prioridades e o ritual que você mais quer viver.</span></div>
+      <div><b>Tracker de hábitos</b><span>Hábitos de pele e corpo, humor e água.</span></div>
+      <div><b>Cardápio</b><span>Refeições, lista de compras e uma receita nova.</span></div>
+      <div><b>Diário</b><span>Humor e três pequenas alegrias por dia.</span></div>
+      <div><b>3 checkpoints</b><span>Nos dias 30, 60 e 90, pra ajustar a rota.</span></div>
+      <div class="wide"><b>Carta para o futuro</b><span>Escreva pra você de daqui a um ano o que viveu nestes 90 dias.</span></div>
+    </div>
+    <div class="months" aria-label="Os três meses do desafio">
+      <div class="month m1"><b>mês 1</b><span>dias 01 a 30</span></div>
+      <div class="month m2"><b>mês 2</b><span>dias 31 a 60</span></div>
+      <div class="month m3"><b>mês 3</b><span>dias 61 a 90</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="skin">
+  <div class="wrap stack">
+    <span class="eyebrow">Novo · A minha pele</span>
+    <h2>Cuidar da pele não é ter muitos produtos. É fazer o básico, todo dia.</h2>
+    <p>Essa parte do caderno não traz uma rotina pronta, porque cada pele é de um jeito. Ela te ajuda a montar a sua rotina de manhã e de noite, a cumprir todo dia e a perceber o que muda entre o dia 1 e o dia 90, com fotos de acompanhamento nos dias 1, 30, 60 e 90.</p>
+    <span class="eyebrow">Cinco combinados com a minha pele</span>
+    <ol class="rules">
+      <li><b>Protetor solar todo dia.</b> Inclusive em dia nublado e dentro de casa perto da janela.</li>
+      <li><b>Nunca dormir de maquiagem.</b> Limpar a pele à noite é o passo que não se negocia.</li>
+      <li><b>Um produto novo de cada vez.</b> Assim você sabe o que funciona e o que irrita.</li>
+      <li><b>Constância antes de quantidade.</b> Uma rotina simples feita todo dia vale mais.</li>
+      <li><b>Observar e anotar.</b> O tracker ajuda a enxergar os padrões da sua pele.</li>
+    </ol>
+    <div class="tracker" aria-label="Exemplo do tracker da pele">
+      <span class="lab">MANHÃ</span><div class="dots" data-row="11111111010000000000"></div>
+      <span class="lab">NOITE</span><div class="dots" data-row="11111011110000000000"></div>
+      <span class="lab">PROTETOR</span><div class="dots" data-row="11111111110000000000"></div>
+    </div>
+    <p class="note">Importante: o caderno não substitui a orientação de um dermatologista. Se você tem acne, manchas, sensibilidade ou algum incômodo que não passa, procure um profissional antes de mudar a sua rotina.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Prove um ritual</span>
+    <h2>Que tal começar agora mesmo?</h2>
+    <div class="ritual-card" aria-live="polite">
+      <div class="ritual-meta">
+        <span class="ritual-day" id="r-day">dia 01</span>
+        <span class="eyebrow" id="r-month">mês 1</span>
+      </div>
+      <p class="ritual-text" id="r-text">Arrume a cama como se fosse de hotel.</p>
+      <span class="ritual-check"><i></i> FEITO</span>
+    </div>
+    <button class="btn-ghost" id="r-btn" type="button">Sortear outro ritual</button>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap stack">
+    <span class="eyebrow">Como funciona</span>
+    <h2>Simples, do jeitinho que a rotina pede</h2>
+    <ol class="steps">
+      <li><p><b>Comece pelas intenções.</b> Escreva quem você quer ser no dia 90.</p></li>
+      <li><p><b>Planeje a semana.</b> Todo começo de semana tem planner, tracker de hábitos de pele e corpo, e cardápio.</p></li>
+      <li><p><b>Viva um ritual por dia.</b> Cada dia do diário traz um pequeno ritual pra cuidar de você.</p></li>
+      <li><p><b>Pare nos checkpoints.</b> Nos dias 30, 60 e 90 você olha pra trás e ajusta a rota.</p></li>
+    </ol>
+    <span class="eyebrow">E em cada semana, um recadinho pra você</span>
+    <div class="stickers">
+      <span>bora começar!</span><span>você consegue ♥</span><span>um dia de cada vez</span><span>metade do caminho!</span><span>constância é charme</span><span>já é hábito!</span><span>reta final ♥</span><span>fecha com chave de ouro</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
+    <span class="eyebrow">Do seu jeito</span>
+    <h2>No tablet ou no papel</h2>
+    <p>Você recebe o caderno em PDF e escolhe como quer viver os seus 90 dias.</p>
+    <div class="ways">
+      <div class="way">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="3" width="22" height="30" rx="3"/><path d="M14 27l9-9 3 3-9 9h-3z"/></svg>
+        <h3>Edite no PDF</h3>
+        <ul>
+          <li>Escreva direto nas páginas pelo tablet ou pelo computador</li>
+          <li>Funciona no GoodNotes e no Notability</li>
+          <li>Links clicáveis: toque em “sumário” pra navegar</li>
+        </ul>
+      </div>
+      <div class="way">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 12V4h16v8"/><rect x="4" y="12" width="28" height="13" rx="2"/><path d="M10 21h16v11H10z"/></svg>
+        <h3>Imprima</h3>
+        <ul>
+          <li>Páginas em tamanho A4, pra imprimir em casa ou na gráfica</li>
+          <li>Preencha à mão e pinte o mapa com lápis de cor</li>
+          <li>Imprima tudo de uma vez ou semana a semana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap stack">
+    <span class="eyebrow">Aqui não tem cobrança</span>
+    <h2>O desafio é sobre voltar, não sobre ser perfeita</h2>
+    <p>Perdeu um dia? Vira a página e continua. No mapa dos 90 dias você pinta cada casinha do jeito que o dia foi, sem culpa.</p>
+    <div class="minimap" id="minimap" aria-hidden="true"></div>
+    <div class="legend">
+      <span><i class="sw full"></i>ritual feito</span>
+      <span><i class="sw half"></i>feito pela metade</span>
+      <span><i class="sw"></i>amanhã eu volto</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">Dúvidas</span>
+    <h2 style="margin-block: 12px 8px">Perguntas frequentes</h2>
+    <details>
+      <summary>O caderno é físico ou digital?</summary>
+      <p>Você recebe em PDF e usa como preferir: pode escrever direto no arquivo pelo GoodNotes, pelo Notability ou pelo computador, ou imprimir em A4 e preencher à mão. Na versão digital, toque em “sumário” no rodapé de qualquer página pra navegar.</p>
+    </details>
+    <details>
+      <summary>Quando eu posso começar?</summary>
+      <p>Quando quiser. São 90 dias seguidos, contados a partir do seu dia 1, divididos em mês 1, mês 2 e mês 3.</p>
+    </details>
+    <details>
+      <summary>E se eu perder um dia?</summary>
+      <p>Tudo bem. Não existe jeito errado de usar este caderno. Vire a página e continue. No mapa você marca “amanhã eu volto” e segue.</p>
+    </details>
+    <details>
+      <summary>Preciso comprar produtos de skincare?</summary>
+      <p>Não. O caderno não traz uma rotina pronta nem indica produtos. Ele te ajuda a organizar e acompanhar o que você já usa, com o básico feito todo dia.</p>
+    </details>
+    <details>
+      <summary>Preciso de muito tempo por dia?</summary>
+      <p>Não. Os rituais são pequenos de propósito: ler dez páginas, beber água numa taça bonita, dançar uma música inteira, ir dormir trinta minutos mais cedo.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="circle k1"></div>
+  <div class="wrap stack">
+    <span class="hand">vem com a gente ♥</span>
+    <h2>Somos todas divas nos apoiando</h2>
+    <p>Daqui a 90 dias você vai escrever uma carta pra você do futuro contando tudo o que viveu. Comece hoje a história que você vai contar.</p>
+    <a class="cta light js-cta" href="https://ig.me/m/daillydadivaaa">Quero romantizar a minha vida</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  Amanda Martins · Regenerar · <a href="https://instagram.com/daillydadivaaa" target="_blank" rel="noopener">@daillydadivaaa</a>
+</footer>
+
+<script>
+// Troque pelo link de checkout (Hotmart, Kiwify etc.) quando tiver um.
+const LINK_DE_COMPRA = 'https://ig.me/m/daillydadivaaa';
+document.querySelectorAll('.js-cta').forEach(a => { a.href = LINK_DE_COMPRA; a.target = '_blank'; a.rel = 'noopener'; });
+
+const R = ["Arrume a cama como se fosse de hotel.","Tome o café da manhã sem o celular por perto.","Compre flores para você, nem que seja uma só.","Monte uma playlist para a sua semana.","Faça uma caminhada de 20 minutos sem fones.","Use uma roupa que você ama num dia comum.","Escreva três coisas pelas quais você é grata.","Acenda uma vela no fim do dia.","Monte um prato bonito, mesmo que seja só para você.","Fotografe cinco detalhes bonitos do seu dia.","Organize a gaveta que mais te incomoda.","Leia dez páginas de um livro.","Tome um banho demorado, sem pressa nenhuma.","Mande uma mensagem carinhosa para alguém.","Pare para assistir ao pôr do sol.","Beba água numa taça bonita.","Faça um piquenique, nem que seja no chão da sala.","Escreva uma carta para você do futuro.","Desligue as telas uma hora antes de dormir.","Conheça um café onde você nunca foi.","Cozinhe uma receita que você nunca fez.","Arrume a mesa para uma refeição comum.","Alongue o corpo logo ao acordar.","Saia para um encontro com você mesma.","Troque a roupa de cama e perfume o travesseiro.","Escute um álbum inteiro, do início ao fim.","Escreva sobre uma memória feliz da infância.","Faça uma limpeza no rolo da câmera.","Cuide de uma planta ou plante algo novo.","Releia as suas intenções e responda o checkpoint.","Coma uma fruta devagar, prestando atenção no sabor.","Use o seu perfume favorito para ficar em casa.","Liste dez coisas que te fazem feliz.","Volte para casa por uma rua diferente.","Prepare um chá e beba sentada, sem fazer mais nada.","Doe algo que você não usa mais.","Escreva um elogio sincero para você mesma.","Assista a um filme que te conforta.","Prepare um café da manhã especial.","Fique quinze minutos em silêncio.","Arrume o seu cantinho de trabalho ou estudo.","Tire uma foto sua de que você goste.","Faça uma pausa ao ar livre no meio do dia.","Passeie por uma livraria ou biblioteca.","Escreva o que você quer sentir no último mês do desafio.","Dance uma música inteira, sozinha.","Prepare uma marmita caprichada.","Hidrate o corpo inteiro, com calma.","Diga não para algo que não te faz bem.","Monte um mural de inspirações.","Almoce longe da mesa de trabalho.","Aprenda algo novo por vinte minutos.","Ligue (não mande áudio) para alguém que você ama.","Escreva sobre algo que você superou este ano.","Esvazie e organize a sua bolsa.","Vá dormir trinta minutos mais cedo.","Faça um passeio sem destino.","Cozinhe uma receita de família.","Escreva cinco coisas que deram certo este mês.","Revisite o seu mapa e responda o checkpoint.","Decore um cantinho da casa.","Faça um mimo para alguém, sem motivo.","Leia um poema em voz alta.","Faça o seu skincare sem pressa, como um ritual.","Coma um doce que você ama, sem culpa.","Escreva como seria a sua rotina ideal.","Faça uma faxina de quinze minutos com música alta.","Acorde cedo para ver o nascer do sol.","Comece a sua lista de desejos para os próximos meses.","Monte um look novo só com peças que você já tem.","Deixe um bilhete para alguém da sua casa.","Respire fundo cinco vezes antes de cada refeição.","Prepare um jantar à luz de velas.","Reveja as suas fotos favoritas do ano.","Caminhe à noite olhando as luzes da cidade.","Faça um presente com as suas mãos.","Escreva o que você aprendeu sobre você nestes 90 dias.","Deixe o celular em outro cômodo por uma hora.","Asse algo que deixe a casa cheirosa.","Escreva três sonhos, sem se censurar.","Tome um café num lugar bonito.","Agradeça a alguém que fez diferença no seu ano.","Prepare algo especial para a noite de hoje.","Descanse sem culpa. Hoje é só isso.","Escute as músicas que marcaram estes 90 dias.","Conte estes 90 dias em dez fotos.","Escreva o que você quer deixar para trás.","Escreva o que você quer levar para o próximo ciclo.","Prepare um pequeno ritual para amanhã.","Releia este caderno, responda o checkpoint e celebre você."];
+const pad = n => String(n).padStart(2, '0');
+const monthOf = i => 'mês ' + Math.ceil(i / 30);
+
+let cur = 1;
+document.getElementById('r-btn').addEventListener('click', () => {
+  let n; do { n = 1 + Math.floor(Math.random() * R.length); } while (n === cur);
+  cur = n;
+  document.getElementById('r-day').textContent = 'dia ' + pad(n);
+  document.getElementById('r-month').textContent = monthOf(n);
+  document.getElementById('r-text').textContent = R[n - 1];
+});
+
+// Exemplo do tracker da pele.
+document.querySelectorAll('.dots').forEach(row => {
+  [...row.dataset.row].forEach(c => { const i = document.createElement('i'); if (c === '1') i.className = 'on'; row.appendChild(i); });
+});
+
+// Mapa ilustrativo: alguns dias feitos, outros pela metade, outros em branco.
+const map = document.getElementById('minimap');
+const pattern = 'ffhffffhf-ffffhff-ffhffff-fhff';
+[...pattern].forEach(s => {
+  const el = document.createElement('i');
+  if (s === 'f') el.className = 'f'; else if (s === 'h') el.className = 'h';
+  map.appendChild(el);
+});
+</script>
+
+</body>
+</html>
