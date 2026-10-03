@@ -102,6 +102,13 @@ section { padding-block: 56px; border-top: 1px solid var(--line); }
 .steps li::before { counter-increment: s; content: "0" counter(s); font-family: var(--display); font-size: 28px; color: var(--out); font-variant-numeric: tabular-nums; }
 .steps b { font-weight: 600; }
 
+/* Do seu jeito */
+.ways { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+.way { border: 1px solid var(--line); border-radius: 14px; background: #FFFDF8; padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.way svg { width: 36px; height: 36px; color: var(--out); }
+.way h3 { font-size: 24px; }
+.way ul { margin: 0; padding-left: 18px; color: #4A3D33; font-size: 15px; display: flex; flex-direction: column; gap: 4px; }
+
 /* Mapa */
 .legend { display: flex; flex-wrap: wrap; gap: 10px 20px; font-size: 14px; }
 .legend span { display: inline-flex; align-items: center; gap: 8px; }
@@ -160,7 +167,7 @@ footer a { color: inherit; }
       <h1>Termine o ano <em>vivendo a sua rotina</em>, não só passando por ela.</h1>
       <p class="lede">Um ritual pequeno por dia, durante 90 dias. Um café sem celular, flores pra você, uma noite sem telas. Somadas, essas escolhas mudam o jeito como você vive o seu dia.</p>
       <a class="cta js-cta" href="https://ig.me/m/daillydadivaaa">Quero o meu caderno</a>
-      <p class="cta-note">Caderno digital em PDF com links. Use no GoodNotes, no Notability ou no computador.</p>
+      <p class="cta-note">Caderno em PDF: preencha no tablet ou imprima e escreva à mão.</p>
     </div>
   </div>
 </div>
@@ -241,6 +248,34 @@ footer a { color: inherit; }
 
 <section>
   <div class="wrap stack">
+    <span class="eyebrow">Do seu jeito</span>
+    <h2>No tablet <em>ou no papel</em></h2>
+    <p>Você recebe o caderno em PDF e escolhe como quer viver os seus 90 dias.</p>
+    <div class="ways">
+      <div class="way">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="3" width="22" height="30" rx="3"/><path d="M14 27l9-9 3 3-9 9h-3z"/></svg>
+        <h3>Edite no PDF</h3>
+        <ul>
+          <li>Escreva direto nas páginas pelo tablet ou pelo computador</li>
+          <li>Funciona no GoodNotes e no Notability</li>
+          <li>Links clicáveis: toque em “sumário” pra navegar</li>
+        </ul>
+      </div>
+      <div class="way">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 12V4h16v8"/><rect x="4" y="12" width="28" height="13" rx="2"/><path d="M10 21h16v11H10z"/></svg>
+        <h3>Imprima</h3>
+        <ul>
+          <li>Imprima as páginas e preencha à mão</li>
+          <li>Pinte o mapa dos 90 dias com lápis de cor</li>
+          <li>Imprima tudo de uma vez ou semana a semana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap stack">
     <span class="eyebrow">Aqui não tem cobrança</span>
     <h2>O desafio é sobre voltar, <em>não sobre ser perfeita</em></h2>
     <p>Perdeu um dia? Vira a página e continua. No mapa dos 90 dias você pinta cada casinha do jeito que o dia foi, sem culpa.</p>
@@ -259,7 +294,7 @@ footer a { color: inherit; }
     <h2 style="margin-block: 12px 8px">Perguntas <em>frequentes</em></h2>
     <details>
       <summary>O caderno é físico ou digital?</summary>
-      <p>Digital, em PDF. Ele tem links: toque em “sumário” no rodapé de qualquer página pra navegar. Funciona no GoodNotes, no Notability ou no computador.</p>
+      <p>Você recebe em PDF e usa como preferir: pode editar e escrever direto no arquivo pelo GoodNotes, pelo Notability ou pelo computador, ou imprimir e preencher à mão. Na versão digital, toque em “sumário” no rodapé de qualquer página pra navegar.</p>
     </details>
     <details>
       <summary>Quando começa?</summary>
